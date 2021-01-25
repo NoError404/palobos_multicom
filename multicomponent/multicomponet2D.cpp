@@ -163,7 +163,7 @@ int main(int argc, char *argv[])
     /* const T G      = 0.6;
     T force         = 3.92e-8; */
     
-    const T G      = 1;
+    const T G      = 0.2;
     T force         = 3.92e-8;
 
     // Use regularized BGK dynamics to improve numerical stability (but note that
