@@ -140,7 +140,7 @@ void writeGifs(MultiBlockLattice2D<T, DESCRIPTOR>& heavyFluid,
                MultiBlockLattice2D<T, DESCRIPTOR>& lightFluid, plint iT)
 {
     ImageWriter<T> imageWriter("leeloo.map");
-    imageWriter.writeScaledGif(createFileName("rho_heavy_", iT, 6),
+    imageWriter.writeScaledGif(createFileName("G=0.5_", iT, 6),
                                *computeDensity(heavyFluid));
     /* imageWriter.writeScaledGif(createFileName("rho_light_", iT, 6),
                                *computeDensity(lightFluid)); */
@@ -163,7 +163,7 @@ int main(int argc, char *argv[])
     /* const T G      = 0.6;
     T force         = 3.92e-8; */
     
-    const T G      = 0.2;
+    const T G      = 0.5;
     T force         = 3.92e-8;
 
     // Use regularized BGK dynamics to improve numerical stability (but note that
